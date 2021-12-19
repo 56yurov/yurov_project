@@ -2,22 +2,30 @@ import React, {useContext, useEffect, useState} from 'react';
 import Card from "../components/Card/Card";
 import {AppContext} from "../App";
 
-const Main = () => {
-    const {tours} = useContext(AppContext)
 
-    if (!tours.length) {
+const Main = () => {
+    const {cars} = useContext(AppContext)
+
+    if (!cars.length) {
         return  (
             <div>...Loading</div>
         )
     }
-    return (
+
+    return  (
         <div>
-            <h1>Tours</h1>
-            {tours.map((card) => {
+        <h1 className={"title"}>KIA Models</h1>
+        <ul className={"container"}>
+
+            {cars.map((card) => {
                 return (
                     <Card key={card.id} card={card}/>
+
                 )
+
             })}
+
+        </ul>
         </div>
     );
 };

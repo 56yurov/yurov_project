@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {useParams} from "react-router-dom";
 
 const Send = () => {
-    const {tourId} = useParams()
+    const {carId} = useParams()
     const [phone, setPhone] = useState('')
     const [name, setName] = useState('')
 
@@ -10,7 +10,7 @@ const Send = () => {
         e.preventDefault()
         localStorage.setItem('name', name)
         localStorage.setItem('phone', phone)
-        localStorage.setItem('tourId',tourId)
+        localStorage.setItem('carId',carId)
     }
 
     return (
