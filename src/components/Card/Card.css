@@ -1,4 +1,30 @@
-.card {
+.container__card {
+    list-style-type: none;
     padding: 8px;
     margin: 8px;
+    width: 20%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 4px;
+
 }
+.card__image{
+    width: 100%;
+    box-shadow: 2px 2px 1px black;
+}
+.container__title{
+    text-align: center;
+    padding: 4px;
+}
+.container__description{
+    text-align: center;
+    margin: 4px auto;
+}
+.container__button{
+    margin: 4px auto;
+    background: white;
+    border: 2px solid black;
+    color: black;
+   }

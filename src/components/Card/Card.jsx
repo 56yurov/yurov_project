@@ -3,16 +3,17 @@ import './Card.css'
 import {useNavigate} from "react-router-dom";
 
 const Card = ({card}) => {
-    const {id, title, description} = card
+    const {id, title, description, image, price} = card
     let navigate = useNavigate()
     return (
-        <div className="card">
-            <img src={'https://travelmamas.com/wp-content/uploads/2020/04/first_state_usa_square.jpg'} width={100}/>
-            <h2>{title}</h2>
-            <p>{description}</p>
-            <button onClick={() => navigate(`/tour/${id}`)}>Перейти</button>
-        </div>
+        <li className="container__card">
+            <h2 className="container__title">{title}</h2>
+            <img className="card__image" src={image} alt={title + price}/>
+            <p className="container__description">{description}</p>
+            <button className="container__button" onClick={() => navigate(`/tour/${id}`)}>Перейти</button>
+        </li>
     )
 }
 
 export default Card;
+
