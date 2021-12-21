@@ -16,7 +16,7 @@ const Private = () => {
     const phone = localStorage.getItem('phone')
 
     if (carId && name && phone) {
-        const car = cars.find(car => car.id == carId)
+        const car = cars.find(car => car.id === Number(carId))
         return (
             <div>
                 <h2>Top Secret</h2>
