@@ -22,7 +22,7 @@ const Car = () => {
             <h2>Car</h2>
 
             <div className="card">
-                <img src={car.image} width={250} />
+                <img src={car.image} alt="car-name" width={250} />
                 <h2>{car.title}</h2>
                 <p>{car.description}</p>
                 <span>{car.price}р</span>

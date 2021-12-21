@@ -9,7 +9,7 @@ const Navigation = () => {
         <header >
             <nav className={"header"}>
                 <Link to="/">
-                    <img className={'logo'} src={'https://www.black.space/wp-content/uploads/2021/01/Blackspace_Kia_1.jpeg'}/>
+                    <img className={'logo'} alt="car-name" src={'https://www.black.space/wp-content/uploads/2021/01/Blackspace_Kia_1.jpeg'}/>
                 </Link>
                 {!isAuth && <button className={"header__button"} onClick={() => navigate(`/private`)}>Login</button>}
                 {isAuth && <button className={"header__button"} onClick={() => setIsAuth(false)}>Logout</button>}
